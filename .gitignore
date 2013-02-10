@@ -1,0 +1,13 @@
+*.tgz
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+
+.autotest
+*~
+public/system/*
+public/images/icons/*
+public/*.zip
+config/database.yml
+

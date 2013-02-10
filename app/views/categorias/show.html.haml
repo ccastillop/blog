@@ -1,0 +1,11 @@
+- title "#{h @categoria.nombre}"
+
+- if user_signed_in?
+  %p
+    = link_to "Edit", edit_user_categoria_path(@user,@categoria)
+    |
+    = link_to "Destroy", [@user,@categoria], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", user_categorias_path(@user)
+
+= render :partial => 'posts/post', :collection => @posts, :spacer_template => "layouts/divisor"

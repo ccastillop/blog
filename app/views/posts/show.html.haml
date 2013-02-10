@@ -1,0 +1,65 @@
+- title h @post.titulo
+- description h @post.resumen
+
+- content_for :head, stylesheet_link_tag('/fancybox/jquery.fancybox-1.2.5.css')
+- content_for :head, javascript_include_tag(:defaults)
+- content_for :head, javascript_include_tag('/fancybox/jquery.fancybox-1.2.5.js')
+
+= render :partial => 'posts/leyenda', :locals => {:post => @post} 
+
+- if user_signed_in? and current_user.admin
+  %p
+    %strong V# 
+    /= @post.version
+    /|
+    /= link_to("Versión previa", user_post_path(@user,@post, :version => @post.version - 1)) if @post.version and @post.version > 1
+    /|
+    /= link_to("Última versión", user_post_path(@user,@post, :version => nil)) if params[:version]
+    |
+    = link_to "Editar", edit_user_post_path(@user,@post)
+    |
+    = link_to "Eliminar", [@user,@post], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "Ver todas", user_posts_path(@user)
+  
+.entrada
+
+  %p{:class=>"resumen"}
+    = @post.resumen
+
+  = to_html @post.texto
+  
+  %p= add_this
+  
+  %p{:class=>"leyenda"}
+    %em{:class=>"gris"} Dentro de
+    = @post.categoria
+    %em{:class=>"gris"} Etiquetado como
+    = @post.tag_list
+
+.divisor
+
+.comentarios
+
+  %h3="#{@post.comentarios.count} comentarios"
+  = render :partial => "comentarios/comentario", :collection =>  @post.comentarios, :spacer_template => "layouts/divisor"
+
+  .divisor
+
+  %h3 Nuevo comentario
+  = nuevo_comentario
+
+
+:javascript
+  $(document).ready(function() { 
+    $("a.box").fancybox({ 
+      'hideOnContentClick': false,
+      'zoomOpacity'			: true,
+      'zoomSpeedIn'     : 400, 
+      'zoomSpeedOut'    : 400, 
+      'overlayShow'			: true,
+      'frameWidth'      : 900,
+      'frameHeight'     : 500
+    });
+  }); 
+
