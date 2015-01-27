@@ -1,3 +1,4 @@
+# coding: utf-8
 class ActsAsTaggableMigrationGenerator < Rails::Generator::Base 
   def manifest 
     record do |m| 

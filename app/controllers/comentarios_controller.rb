@@ -1,3 +1,4 @@
+# coding: utf-8
 class ComentariosController < ApplicationController
   before_filter :iniciar
   before_filter :autorizado?, :except => [:show,:index, :new, :create]

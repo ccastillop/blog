@@ -1,3 +1,4 @@
+# coding: utf-8
 Cristiancastillo::Application.routes.draw do 
   devise_for :users, :as  => :cuentas
 

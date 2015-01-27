@@ -1,3 +1,4 @@
+# coding: utf-8
 class CreateFigurasTable < ActiveRecord::Migration
   def self.up
     create_table :figuras do |t|

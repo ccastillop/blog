@@ -1,3 +1,4 @@
+# coding: utf-8
 class Figura < ActiveRecord::Base
   validates_presence_of :nombre
   belongs_to :user

@@ -1,3 +1,4 @@
+# coding: utf-8
 class ContactoObserver < ActiveRecord::Observer
   
   def after_create(record)

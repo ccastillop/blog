@@ -1,3 +1,4 @@
+# coding: utf-8
 class Tagging < ActiveRecord::Base #:nodoc:
   belongs_to :tag
   belongs_to :taggable, :polymorphic => true

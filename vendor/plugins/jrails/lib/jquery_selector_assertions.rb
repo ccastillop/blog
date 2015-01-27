@@ -1,3 +1,4 @@
+# coding: utf-8
 #
 #  jQuery Selector Assertions (modifications to the prototype/scriptaculous assertions)
 #

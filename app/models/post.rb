@@ -1,3 +1,4 @@
+# coding: utf-8
 class Post < ActiveRecord::Base
   acts_as_taggable
   #versioned

@@ -1,3 +1,4 @@
+# coding: utf-8
 class Comentario < ActiveRecord::Base
   #attr_accessible :texto, :nombre, :email, :web, :user_id, :post_id
   belongs_to :post

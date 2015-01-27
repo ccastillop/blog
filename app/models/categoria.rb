@@ -1,3 +1,4 @@
+# coding: utf-8
 class Categoria < ActiveRecord::Base
   attr_accessible :nombre, :menu
   belongs_to :user

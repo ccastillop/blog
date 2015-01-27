@@ -1,3 +1,4 @@
+# coding: utf-8
 class AddColumnsUserWebBlog < ActiveRecord::Migration
   def self.up
     add_column :users, :web, :string

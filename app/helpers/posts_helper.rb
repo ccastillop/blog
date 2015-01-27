@@ -1,3 +1,4 @@
+# coding: utf-8
 module PostsHelper
   # def to_html(text, ancho = :large)
   #   #procesado del texto.

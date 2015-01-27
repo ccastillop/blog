@@ -1,3 +1,4 @@
+# coding: utf-8
 class Photo < ActiveRecord::Base
   acts_as_taggable
   

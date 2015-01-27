@@ -14,6 +14,8 @@ gem "will_paginate", "~> 3.0.pre2"
 
 gem 'gravtastic',  '>= 2.1.0'
 
+gem 'reverse_captcha'
+
 #gem 'coderay'
 #gem 'rack-codehighlighter'
 

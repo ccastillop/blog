@@ -1,3 +1,4 @@
+# coding: utf-8
 class ContactosController < ApplicationController
   before_filter :autorizado?, :except => [:new, :create, :show]
   

@@ -1,3 +1,4 @@
+# coding: utf-8
 class CreateComentarios < ActiveRecord::Migration
   def self.up
     create_table :comentarios do |t|

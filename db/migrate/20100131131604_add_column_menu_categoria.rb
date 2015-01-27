@@ -1,3 +1,4 @@
+# coding: utf-8
 class AddColumnMenuCategoria < ActiveRecord::Migration
   def self.up
     add_column :categorias, :menu, :boolean, :default => false

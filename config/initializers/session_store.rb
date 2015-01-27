@@ -1,3 +1,4 @@
+# coding: utf-8
 # Be sure to restart your server when you modify this file.
 
 Cristiancastillo::Application.config.session_store :cookie_store, :key => '_cristiancastillo_session'

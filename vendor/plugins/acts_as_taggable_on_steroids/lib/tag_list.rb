@@ -1,3 +1,4 @@
+# coding: utf-8
 class TagList < Array
   cattr_accessor :delimiter
   self.delimiter = ','

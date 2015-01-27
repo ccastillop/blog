@@ -1,3 +1,4 @@
+# coding: utf-8
 require File.dirname(__FILE__) + '/abstract_unit'
 
 class ActsAsTaggableOnSteroidsTest < ActiveSupport::TestCase

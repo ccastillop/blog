@@ -1,3 +1,4 @@
+# coding: utf-8
 class FigurasController < ApplicationController
   before_filter :get_post
   before_filter :autorizado?, :except => :show
